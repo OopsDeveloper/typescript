@@ -1,4 +1,5 @@
 {
+  //절차지향적으로 구현
   type CoffeeCup = {
     shots: number;
     hasMilk: boolean;
@@ -12,6 +13,8 @@
       throw new Error('Not enough coffee beans!');
     }
     coffeeBeans -= shots * BEANS_GRAMM_PER_SHOT;
+
+    //key와 value가 같다면 생략 가능
     return {
       shots,
       hasMilk: false,

@@ -15,6 +15,10 @@
       this.coffeeBeans = coffeeBeans;
     }
 
+    // static을 이용해서 무언가 object를 만들 수 있는 함수를 제공한다면
+    // 누군가가 생성자를 이용해서 생성하는 것을 금지하기 위해서 쓰는데
+    // 생성자를 private로 둔다.
+    // ex) CoffeMaker.makeMachine(32);
     static makeMachine(coffeeBeans: number): CoffeeMaker {
       return new CoffeeMaker(coffeeBeans);
     }
