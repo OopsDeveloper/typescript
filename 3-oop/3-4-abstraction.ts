@@ -72,7 +72,10 @@
     }
   }
 
-  class AmateurUser {
+  // 아마추어와 프로바리스타는
+  // 생성자에서 CoffeeMaker와 CommercialCoffeMaker를 받아오기 때문에
+  // 인터페이스에 규약된 함수들만 접근이 가능함
+ class AmateurUser {
     constructor(private machine: CoffeeMaker) {}
     makeCoffee() {
       const coffee = this.machine.makeCoffee(2);

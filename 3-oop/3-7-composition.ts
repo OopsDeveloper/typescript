@@ -1,9 +1,26 @@
 {
+  // 생성자 인자에 private, public과 같은 접근 제어자를 붙이면,
+  // 자동으로 멤버 변수로 등록
+  /*
+  constructor(
+      coffeeBeans: number,
+      private milk: MilkFrother,
+      private sugar: SugarProvider
+    ) {
+      this.coffeeBeans = coffeeBeans;
+      // this.milk = milk; (생략)
+      // this.sugar = sugar; (생략)
+    }
+  */
+
+  // 클래스들 사이에 서로 상호작용을 하는 경우
+  // 클래스 자신을 노출하는 것이 아니라 인터페이스를 이용해서 의사소통을 해야된다.
   type CoffeeCup = {
     shots: number;
     hasMilk?: boolean;
     hasSugar?: boolean;
   };
+
 
   interface MilkFrother {
     makeMilk(cup: CoffeeCup): CoffeeCup;

@@ -1,4 +1,6 @@
 {
+
+  // ?는 옵셔널을 말해서 있을수도 있고 없을수도 있다.
   type CoffeeCup = {
     shots: number;
     hasMilk?: boolean;

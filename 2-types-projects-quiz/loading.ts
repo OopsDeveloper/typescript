@@ -32,6 +32,7 @@
         console.log(`😥 ${state.reason}`);
         break;
       default:
+        const invalid: never = state;
         throw new Error(`unknown state: ${state}`);
     }
 

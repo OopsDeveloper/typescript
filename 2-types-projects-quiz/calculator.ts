@@ -17,6 +17,7 @@ function calculate(command: Command, a: number, b: number):number {
         case "remainder":
             return a % b;
         default:
+            const invalid: never = command;
             throw Error('unknown command');
     }
 }

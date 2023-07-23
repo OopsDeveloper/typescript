@@ -30,6 +30,8 @@
     };
   }
 
+  // : void는 생략 가능
+  // 별루 좋지 않은 것
   // printLoginState(state: LoginState)
   // success -> 🎉 body
   // fail -> 😭 reason
